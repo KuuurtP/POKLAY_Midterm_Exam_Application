@@ -12,15 +12,25 @@
         margin: 2em;
         text-align: center;
         }
+        
+        .Title{
+            font-weight: bold;
+        }
+        
+        .movie-title {
+            font-weight: bold;
+        }
         h1 {
         margin-bottom: 20px;
         }
+        
         .table-container {
         display: inline-block;
         text-align: left;
         width: 80%;
         max-width: 800px;
         }
+
         table {
         width: 100%;
         border-collapse: collapse;
@@ -29,23 +39,18 @@
         border-radius: 8px;
         overflow: hidden;
         }
+
         th, td {
         padding: 12px 15px;
         text-align: left;
         }
         th {
-        background-color: #4CAF50;
+        background-color:rgb(71, 93, 221);
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         }
-        tr:nth-child(even) {
-        background-color: #f9f9f9;
-        }
-        tr:hover {
-        background-color: #e9f5e9;
-        transition: background-color 0.3s ease;
-        }
+
     </style>
 </head>
 <body>
@@ -54,7 +59,7 @@
         <table>
         <thead>
             <tr>
-            <th>Title</th>
+            <th class="Title">Title</th>
             <th>Year</th>
             <th>Director</th>
             </tr>
@@ -62,7 +67,7 @@
         <tbody>
             @foreach ($movies as $movie)
             <tr>
-            <td>{{ $movie['title'] }}</td>
+            <td class="movie-title">{{ $movie['title'] }}</td>
             <td>{{ $movie['year'] }}</td>
             <td>{{ $movie['director'] }}</td>
             </tr>
